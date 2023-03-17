@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập từ cần tìm" name="q" id="txt1">
+<button type="button" onclick="find()">Tìm</button>
+<h1 id="result"></h1>
+
+
+<script>
+    function find() {
+        let input = document.getElementById('txt1').value
+        let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (input === arr_eng[i]) {
+                for (let j = 0; j <arr_vie.length; j++) {
+                    if (i === j){
+                        document.getElementById('result').innerHTML = arr_vie[j]
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
